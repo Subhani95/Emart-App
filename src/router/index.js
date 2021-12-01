@@ -167,20 +167,4 @@ const router = new VueRouter({
   routes,
 });
 
-//router Guards
-//no one can access to anyother page through URl and Also he cannot enter to the main product page if he is not registered
-// router.beforeEach((to, from, next) => {  
-
-//   var isAuthenticated = false;
-//   if (localStorage.getItem('registerUser'))
-//     isAuthenticated = true;
-//   else
-//     isAuthenticated = false;
-//   if (['/Login', '/Signup', ].includes(to.path) || isAuthenticated) {
-//     next();
-//   } else {
-//     next('/Login'); 
-//   }
-// })
-
 export default router

@@ -10,15 +10,8 @@ in api
           :product="product" 
         />
    
-    </v-card>
-
-    
-
-     
+    </v-card>  
 </template>
-
-
-
 
 <script>
 import ProductCard from "./ProductCard.vue"; //imported the component

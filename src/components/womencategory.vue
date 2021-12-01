@@ -26,7 +26,7 @@ Navbar component is import here
       </v-card-subtitle>
 
       <v-card-actions>
-        <v-btn color="orange lighten-2" text @click="productCart()">
+        <v-btn color="orange lighten-2" text>
           Add to cart
         </v-btn>
 
@@ -51,7 +51,6 @@ export default {
   data: () => {
     return {
       loading: false,
-      selection: 1,
       womenclothings: [],
     }
   },

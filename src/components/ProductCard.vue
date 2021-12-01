@@ -73,7 +73,6 @@ export default {
   data: () => {
     return {
       loading: false,
-      selection: 1,
       show: false,
     };
   },

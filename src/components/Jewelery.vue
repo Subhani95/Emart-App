@@ -36,7 +36,7 @@ Navbar import globally
                 <v-row class="ml-4 mb-3">
                   <span>Rating: </span>
                   <v-rating
-                    :value="5"
+                    :value="jewelery.rating.rate"
                     color="amber"
                     dense
                     half-increments

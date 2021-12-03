@@ -22,14 +22,16 @@ it will allow the to show each item in this template
               <!-- <br /> -->
               <v-row align="center" class="mx-0 mr-6">
                 <v-rating
-                  :value="5"
+                  :value="product.rating.rate"
                   color="amber"
                   dense
                   half-increments
                   readonly
                   size="14"
                 ></v-rating>
-                <div class="grey--text ms-4">5 (500)</div> </v-row
+                <div class="grey--text ms-4">
+                  {{ product.rating.rate }}
+                </div> </v-row
               ><br />
               <v-chip>Price: ${{ product.price }}</v-chip>
               <div>

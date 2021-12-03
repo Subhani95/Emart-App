@@ -2,7 +2,7 @@
 User will enter the registered data of username and password he entered during the Sign uP PAGE
 -->
 <template>
-    <v-app id="app">
+  <v-app id="app">
     <v-app-bar app height="50">
       <v-toolbar-title style="width: 350px"> Emart </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -37,10 +37,7 @@ User will enter the registered data of username and password he entered during t
                         required
                       ></v-text-field>
                       <div class="text-center mt-3">
-                        <v-btn
-                          color="dark"
-                          class="mr-4"
-                          @click="registerUser"
+                        <v-btn color="dark" class="mr-4" @click="registerUser"
                           ><v-icon dark left block>
                             mdi-checkbox-marked-circle
                           </v-icon>
@@ -59,10 +56,7 @@ User will enter the registered data of username and password he entered during t
   </v-app>
 </template>
 <script>
-import {
-  userNameRules,
-  passwordRules,
-} from '../constant/const.js'
+import { userNameRules, passwordRules } from '../constant/const.js' //const.js file import to apply some rules
 export default {
   data: () => ({
     valid: true,
@@ -80,16 +74,15 @@ export default {
         return a.userName == this.userName && a.password == this.password
       })
       if (this.registerUser) {
-        (this.$store.state.authenticated=true)
-          this.$router.push({ name: 'products' })
+        this.$router.push({ name: 'products' })
         localStorage.setItem('registerUser', JSON.stringify(this.registerUser))
       } else {
-        this.$alert('Please Enter Correct Details')
+        this.$alert('Please Enter Correct Details') //package alerts are used so that user can get an alert if he registered or not
       }
     },
-    SignUp(){
-      this.$router.push({name:"Signup"})
-    }
+    SignUp() {
+      this.$router.push({ name: 'Signup' }) //this method is called on navbar just a simple router link to the signup page
+    },
   },
 }
 </script>

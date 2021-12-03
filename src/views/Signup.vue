@@ -61,11 +61,6 @@ although its not a good way but for this project use local storage
                         type="password"
                         required
                       ></v-text-field>
-                      <v-checkbox
-                        :rules="checkboxRules"
-                        label="Do you agree?"
-                        required
-                      ></v-checkbox>
                     </v-form>
                   </v-card-text>
                   <div class="text-center mt-4 mb-4">
@@ -93,7 +88,6 @@ import {
   userNameRules,
   passwordRules,
   phoneNumber1,
-  checkboxRules,
 } from '../constant/const.js'
 
 export default {
@@ -107,7 +101,6 @@ export default {
       userNameRules: userNameRules,
       phoneNumber1: phoneNumber1,
       passwordRules: passwordRules,
-      checkboxRules: checkboxRules,
 
       fullName: '',
       email: '',
@@ -122,6 +115,7 @@ export default {
   },
 
   methods: {
+    //method is created for storing data
     storeData() {
       if (this.$refs.form.validate()) {
         let user = {
@@ -141,14 +135,14 @@ export default {
           this.newUser.push(user)
           localStorage.setItem('newUser', JSON.stringify(this.newUser))
           this.$alert('Account Created Please Login!')
-          this.$router.push({ name: 'Login' })
+          this.$router.push({ name: 'Login' }) //after a successfull account created user will move to the login page
         }
       } else {
         this.$alert('Check All fields fill or correct')
       }
     },
     logIn() {
-      this.$router.push({ name: 'Login' })
+      this.$router.push({ name: 'Login' }) //login button
     },
   },
 }

@@ -1,9 +1,8 @@
 <template>
-  
-<v-app>
-    <v-main>
+  <v-app>
+    <section>
       <router-view />
-    </v-main>
+    </section>
   </v-app>
 </template>
 

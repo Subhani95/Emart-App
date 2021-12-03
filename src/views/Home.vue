@@ -3,18 +3,14 @@
     <v-card class="about text-center">
       <h1>Welcome to Emart</h1>
       <div class="pa-12 text-justify">
-        Emart is an online platform Where user can have different Categories of Products and can access to them
+        Emart is an online platform Where user can have different Categories of
+        Products and can access to them
       </div>
     </v-card>
   </v-card>
 </template>
 <script>
-
 export default {
-  name: "Home",
-
-  components: {
-   
-  },
-};
+  name: 'Home',
+}
 </script>

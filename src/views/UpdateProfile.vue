@@ -6,12 +6,9 @@ Login User can update its profile and it will also update the data inside regist
     <v-app-bar app height="50">
       <v-toolbar-title style="width: 350px"> Emart </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn @click="homePage"
-        ><v-icon class="text">mdi-arrow-left</v-icon>Shop More</v-btn
-      >
-        <v-btn @click="logout"> Logout </v-btn>
+      <v-btn class="mr-4" @click="homePage">Shop More</v-btn>
+      <v-btn @click="logout"> Logout </v-btn>
     </v-app-bar>
-    <h3 class="text-center">Update Profile</h3>
     <v-content>
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
@@ -105,7 +102,7 @@ export default {
         userName: this.userName,
         phoneNumber: this.phoneNumber,
       }
-      localStorage.setItem('newUser', JSON.stringify(this.newUser))
+      // localStorage.setItem('newUser', JSON.stringify(this.newUser))
       localStorage.setItem(
         'registerUser',
         JSON.stringify(this.newUser[this.index])

@@ -1,14 +1,13 @@
-<!--Main Navbar--> 
+<!--Main Navbar-->
 <template>
   <v-app id="inspire">
     <!-- Drawer starts from here -->
     <v-navigation-drawer temporary app v-model="drawer">
       <template v-slot:prepend>
         <v-list-item two-line>
-          <v-list-item-avatar> </v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title>
-              <h3><u> CATEGORIES </u></h3>
+              <h3>CATEGORIES</h3>
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -44,7 +43,7 @@
       <v-spacer></v-spacer>
 
       <v-spacer></v-spacer>
- <v-btn color="dark"  class="mr-2 black--text" @click="home">
+      <v-btn color="dark" class="mr-2 black--text" @click="home">
         <v-icon> mdi-home-variant</v-icon>
       </v-btn>
       <v-menu left bottom>
@@ -61,27 +60,25 @@
         </template>
       </v-menu>
 
-      <v-btn color="dark"  class="mr-2 black--text" @click="updateProfile">
+      <v-btn color="dark" class="mr-2 black--text" @click="updateProfile">
         <v-icon> mdi-update</v-icon>
       </v-btn>
 
-      <v-btn color="dark" class="black--text" @click="logout">
-        Logout
-      </v-btn>
+      <v-btn color="dark" class="black--text" @click="logout"> Logout </v-btn>
     </v-app-bar>
   </v-app>
 </template>
 
 <script>
 export default {
-  name: "Navbar",
+  name: 'Navbar',
   data: () => ({
     drawer: null,
   }),
-   methods: {
+  methods: {
     logout() {
       localStorage.removeItem('registerUser')
-       //removing the register user who entered during the login page
+      //removing the register user who entered during the login page
       this.$router.push({ name: 'Login' }) //router links
     },
     updateProfile() {
@@ -102,9 +99,9 @@ export default {
     jeweleryItems() {
       this.$router.push({ name: 'jewelery' })
     },
-    home(){
-      this.$router.push({name:"products"})
-    }
-  }
-};
+    home() {
+      this.$router.push({ name: 'products' })
+    },
+  },
+}
 </script>

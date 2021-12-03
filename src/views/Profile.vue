@@ -11,7 +11,9 @@ this will show user register credentials which he entered during the Login in a 
               <v-row>
                 <v-col cols="12" md="12">
                   <v-card-text class="mt-12">
-                    <h1 class="text-center display-1 Dark--text text--depressed-3 mb-4">
+                    <h1
+                      class="text-center display-1 Dark--text text--depressed-3 mb-4"
+                    >
                       User Entered Credentials Here
                     </h1>
                     <v-form class="text-center">

@@ -3,10 +3,12 @@ Const.js file
 Vuetify validation is used through Rules method
 Every validation rule against every field is stored in a variable 
 Regex methods are used for the validation 
+Rules are used 
 */
 const fnameRules = [
   (value) => !!value || 'Required.',
-  (value) => (value || '').length >= 3 || ' First Letter Capital Max 20 characters',
+  (value) =>
+    (value || '').length >= 3 || ' First Letter Capital Max 20 characters',
   (value) => {
     const pattern = /\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/ //First Letter Capital Example: Ali minimun length Should be 3
     return pattern.test(value) || 'Invalid Fullname.'
@@ -36,7 +38,9 @@ const userNameRules = [
 const passwordRules = [
   //password maximum lenght is 8 or Equal to 8
   (value) => !!value || 'Required.',
-  (value) => (value || '').length >= 8 || 'Max 8 Digits One Capital Letter and one Digit is Neccessary',
+  (value) =>
+    (value || '').length >= 8 ||
+    'Max 8 Digits One Capital Letter and one Digit is Neccessary',
   (value) => {
     //VALID regx expression is Hsys16_98
     const pattern = /^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$/
@@ -56,14 +60,6 @@ const phoneNumber1 = [
     return pattern.test(value) || 'Invalid phonenumber.'
   },
 ]
-const checkboxRules = [(value) => !!value || 'You must agree to continue!']
 
 //exporting all regex
-export {
-  passwordRules,
-  userNameRules,
-  emailRules,
-  fnameRules,
-  phoneNumber1,
-  checkboxRules,
-}
+export { passwordRules, userNameRules, emailRules, fnameRules, phoneNumber1 }
